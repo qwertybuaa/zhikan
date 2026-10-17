@@ -1,16 +1,16 @@
 <p align="center"><img src="assets/logo-512.png" width="88" alt="只看 Logo"></p>
 <h1 align="center">只看</h1>
-<p align="center">只看想看的。</p>
+<p align="center">B 站极简首页</p>
 <p align="center"><a href="https://greasyfork.org/zh-CN/scripts/600653-%E5%8F%AA%E7%9C%8B">安装脚本</a> · <a href="https://github.com/qwertybuaa/zhikan/releases/latest">下载 Chrome 扩展</a></p>
 
-打开 B 站，首页只留下一个搜索框，和你亲手固定的 UP 主。
+隐藏 B 站首页推荐流，只显示搜索框和你固定的 UP 主。
 
 ![只看首页](assets/home.png)
 
-- 固定常看的 UP 主，一步直达投稿页。
-- 全站搜索，或只搜某位 UP 主。
-- 从空白列表开始，随时添加、编辑、移除和撤销。
-- 在工具栏菜单中开启或关闭极简首页。
+- 全站搜索，或只搜索某位 UP 主的视频。
+- 自由添加、编辑、移除固定的 UP 主，点击直达投稿页。
+- 固定列表自动保存，支持撤销移除。
+- 一键开启或关闭极简首页。
 
 ## 安装
 
