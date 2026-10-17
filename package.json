@@ -1,0 +1,11 @@
+{
+  "name": "bili-focus",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "package": "python3 scripts/package.py",
+    "build:userscript": "python3 scripts/build-userscript.py"
+  }
+}

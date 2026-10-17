@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "只看",
+  "version": "1.2.0",
+  "description": "将 B 站首页替换为搜索框和固定的 UP 主，跳过推荐流，直达想看的内容。",
+  "minimum_chrome_version": "102",
+  "permissions": ["storage", "declarativeNetRequestWithHostAccess", "activeTab"],
+  "host_permissions": ["*://www.bilibili.com/*", "*://bilibili.com/*"],
+  "background": {"service_worker": "background.js", "type": "module"},
+  "action": {
+    "default_title": "只看",
+    "default_popup": "popup.html",
+    "default_icon": {"16": "icons/icon-16.png", "32": "icons/icon-32.png"}
+  },
+  "icons": {"16": "icons/icon-16.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png"},
+  "declarative_net_request": {
+    "rule_resources": [{"id": "focus_home", "enabled": true, "path": "rules.json"}]
+  },
+  "web_accessible_resources": [{
+    "resources": ["home.html"],
+    "matches": ["<all_urls>"]
+  }],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none';"
+  }
+}

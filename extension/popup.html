@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>只看</title><link rel="stylesheet" href="styles.css"><script type="module" src="popup.js"></script></head>
+<body class="popup-page">
+  <header class="popup-header"><img class="popup-logo" src="icons/bilibili.svg" width="96" height="44" alt="哔哩哔哩"></header>
+  <main>
+    <label class="setting-row" for="focus-enabled">
+      <span>极简 B 站</span>
+      <span class="setting-control"><span id="setting-value" class="setting-value">加载中</span><input id="focus-enabled" class="switch" type="checkbox" role="switch" aria-describedby="setting-value" disabled></span>
+    </label>
+    <p id="setting-status" class="setting-status" role="status" aria-live="polite"></p>
+    <div id="popup-intro"><p class="popup-description">在 UP 主空间页打开插件即可固定。</p></div>
+    <form id="quick-pin-form" hidden>
+      <h1 id="quick-heading">固定这位 UP 主</h1>
+      <p id="quick-uid" class="popup-description"></p>
+      <label for="quick-name">UP 主名称</label><input id="quick-name" required maxlength="40" autocomplete="off">
+      <label for="quick-note">备注 <span class="optional">选填</span></label><input id="quick-note" maxlength="80" placeholder="例如：算法 · 力扣" autocomplete="off">
+      <button id="quick-save" class="primary-button full-width" type="submit">固定到首页</button>
+    </form>
+    <p id="popup-status" class="status" role="status" aria-live="polite"></p>
+    <button id="open-home" class="secondary-button full-width" type="button">打开极简首页 <span aria-hidden="true">↗</span></button>
+  </main>
+</body>
+</html>

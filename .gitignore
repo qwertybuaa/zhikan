@@ -1,0 +1,17 @@
+# Generated packages and local browser evidence.
+artifacts/
+extension/_metadata/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Automation configured for the author's local browser profiles.
+scripts/cdp.mjs
+scripts/browser-test.mjs
+scripts/settings-test.mjs
+scripts/userscript-browser-test.mjs
+scripts/install-daily.mjs
+scripts/windows-install.ps1
+scripts/render-icons-local.mjs
+scripts/release-check-local.mjs

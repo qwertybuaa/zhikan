@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>只看</title>
+  <link rel="icon" href="icons/icon-32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="home.js"></script>
+</head>
+<body class="home-page">
+  <main class="main">
+    <img class="bilibili-logo" src="icons/bilibili.svg" width="140" height="64" alt="哔哩哔哩">
+    <section class="search-section" aria-labelledby="heading">
+      <h1 id="heading" class="sr-only">搜索 B 站</h1>
+      <form id="search-form" class="search-form" role="search">
+        <label class="sr-only" for="search-scope">搜索范围</label>
+        <select id="search-scope" title="搜索范围"><option value="">全站</option></select>
+        <span class="search-divider" aria-hidden="true"></span>
+        <label class="sr-only" for="search-input">搜索 B 站</label>
+        <input id="search-input" type="search" placeholder="搜索 B 站" autocomplete="off" maxlength="200" required autofocus>
+        <button class="search-submit" type="submit" aria-label="搜索"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+      </form>
+    </section>
+
+    <section class="pins-section" aria-labelledby="pins-heading">
+      <div class="section-heading">
+        <h2 id="pins-heading">固定的 UP 主</h2>
+        <div class="section-actions"><button id="manage-button" type="button" class="text-button" aria-pressed="false" disabled>管理</button><span class="action-divider" aria-hidden="true"></span><button id="add-button" type="button" class="text-button add-button" disabled><span aria-hidden="true">＋</span> 添加 UP 主</button></div>
+      </div>
+      <div id="pin-list" class="pin-list" aria-busy="true"><p class="empty-state">加载中…</p></div>
+    </section>
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+    <button id="undo-button" class="text-button undo-button" type="button" hidden>撤销移除</button>
+    <button id="retry-button" class="text-button" type="button" hidden>重新读取</button>
+  </main>
+
+  <dialog id="pin-dialog" aria-labelledby="dialog-title">
+    <form id="pin-form">
+      <div class="dialog-header"><h2 id="dialog-title">固定一位 UP 主</h2><button id="close-dialog" class="icon-button" type="button" aria-label="关闭"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div>
+      <label for="pin-url">空间链接或 UID</label>
+      <input id="pin-url" placeholder="https://space.bilibili.com/206214" required autocomplete="off" spellcheck="false">
+      <label for="pin-name">UP 主名称</label>
+      <input id="pin-name" placeholder="例如：灵茶山艾府" required maxlength="40" autocomplete="off">
+      <label for="pin-note">备注 <span class="optional">选填</span></label>
+      <input id="pin-note" placeholder="例如：算法 · 力扣" maxlength="80" autocomplete="off">
+      <p id="form-error" class="form-error" role="alert"></p>
+      <div class="dialog-actions"><button id="cancel-dialog" class="secondary-button" type="button">取消</button><button id="save-pin" class="primary-button" type="submit">固定到首页</button></div>
+    </form>
+  </dialog>
+</body>
+</html>
